@@ -1928,8 +1928,8 @@ var Christmas = function() {
         t = ($(".container"), $(".page-a")),
         n = $(".page-b"),
         r = $(".page-c"),
-        i = Hmlt5Audio("../images/carousel/1.mp4");
-    i.end(function() { Hmlt5Audio("../images/carousel/2.mp4", !0) });
+        i = Hmlt5Audio("../music/scene.mp3");
+    i.end(function() { Hmlt5Audio("../music/scene.mp3", !0) });
     var o = new PageA(t);
     o.run(function() { e.publish("completeA") }), e.subscribe("pageB", function() { new PageB(n, function() { e.publish("completeB") }) }), e.subscribe("pageC", function() { new PageC }), e.subscribe("completeA", function() { changePage(t, "effect-out", function() { e.publish("pageB") }) }), e.subscribe("completeB", function() { changePage(r, "effect-in", function() { e.publish("pageC") }) }) };
 $(function() { Christmas() });
